@@ -16,5 +16,9 @@ async def on_message(message):
     return
   if msg_txt in event.hello:
     await message.channel.send(f'{msg_author.mention}さん、おはやいます')
+    return
+  if msg_txt in event.goodNight:
+    await message.channel.send(f'{msg_author.mention}さん、おやすみなさい')
+    return
 
 client.run(TOKEN)
